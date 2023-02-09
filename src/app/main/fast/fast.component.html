@@ -1,0 +1,24 @@
+<div class="container text-center">
+    <br /><br /><br /><br /><br /><br />
+<main-timer></main-timer>
+    <br />
+    <h5 *ngIf=""> Select your Fasting Plan below</h5>
+    <br /><br /><br /><br />
+    <div class="row align-items-start">
+        <div class="col">
+            <button (click)="btnStat()"> Vital Statistics</button>
+        </div>
+        <div class="col">
+            <main-fastingplan (selectPlanEvent)="selectPlan($event)"></main-fastingplan>
+        </div>
+
+        <div class="col">
+            <button (click)="btnSummary()"> Summary</button>
+        </div>
+    </div>
+    <br />
+
+    <!-- <main-form></main-form> -->
+
+    <br>
+</div>
