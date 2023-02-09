@@ -1,21 +1,22 @@
 import { Component, ViewChild } from '@angular/core';
-import { CdTimerModule } from 'angular-cd-timer';
+import { CdTimerComponent, TimeInterface } from 'angular-cd-timer';
 
 @Component({
   selector: 'main-timer',
   templateUrl: './timer.component.html',
   styleUrls: ['./timer.component.scss'],
-
 })
 
-@ViewChild('basicTimer')
 export class TimerComponent {
+  @ViewChild('basicTimer', { static: true }) basicTimer: CdTimerComponent;
 
-  btnStart() {
+  btnStart(action: string) {
+    this.basicTimer.start();
     console.log("Timer button was started")
 
   }
-  btnStop() {
+  btnStop(action: string) {
+    this.basicTimer.stop();
     console.log("Timer button was stopped")
   }
 
